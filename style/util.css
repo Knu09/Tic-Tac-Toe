@@ -1,0 +1,44 @@
+
+
+/*!*xs*!*/
+/*@media (min-width: 475px){*/
+/*    section {*/
+/*        max-width: 50px;*/
+/*    }*/
+/*}*/
+
+/*!*s*!*/
+/*@media (min-width: 641px){*/
+/*    section {*/
+/*        max-width: 100px;*/
+/*    }*/
+/*}*/
+
+/*!*m*!*/
+/*@media (min-width: 769px){*/
+/*    section {*/
+/*        max-width: 200px;*/
+/*    }*/
+/*}*/
+
+/*!*lg*!*/
+/*@media (min-width: 1100px){*/
+/*    section {*/
+/*        max-width: 300px;*/
+/*    }*/
+/*}*/
+
+/*!*xL*!*/
+/*@media (min-width: 1440px){*/
+/*    section {*/
+/*        max-width: 1000px;*/
+/*    }*/
+/*}*/
+
+/*!*2xL*!*/
+/*@media (min-width: 2560px){*/
+/*    .container {*/
+/*        max-width: 1500px;*/
+
+/*    }*/
+/*}*/

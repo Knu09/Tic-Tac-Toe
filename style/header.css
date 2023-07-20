@@ -1,0 +1,39 @@
+.header {
+    position: fixed;
+    color: white;
+
+    left:0;
+    right:0;
+    top:0;
+
+    height: 80px;
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+
+    font-size: 20px;
+}
+
+
+.subtitle > span {
+    font-size: 80px;
+}
+
+.logo {
+    width: 200px;
+}
+
+.tic {
+    color: #6f33e7;
+    font-weight: bold;
+}
+
+.tac {
+    color: white;
+    font-weight: bold;
+}
+
+.toe {
+    color: #a9352b;
+    font-weight: bold;
+}

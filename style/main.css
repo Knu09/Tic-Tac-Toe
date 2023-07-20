@@ -1,0 +1,225 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+
+}
+
+:root {
+    --cell-size: 200px;
+    --mark-size: calc(var(--cell-size) * .8)
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 50px 0 0 0;
+    padding: 0;
+
+    height: 100%;
+    background-color: black;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    font-family: "Poppins", serif;
+}
+
+
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 1500px;
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(33,30,31);
+    width: 700px;
+    height: 700px;
+    border-radius: 20px;
+}
+
+.board {
+    width: 600px;
+    height: 650px;
+    cursor: pointer;
+
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(3, auto);
+
+    position: relative;
+}
+
+.cell {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border: 3px solid rgb(230 230 230);
+    transition: background-color .2s;
+
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.cell.x,
+.cell.circle {
+    cursor: not-allowed;
+}
+
+
+.cell:hover {
+    background-color: rgb(45 45 45);
+}
+
+.cell:first-child {
+    border-top-left-radius: 10px;
+}
+
+.cell:nth-child(3) {
+    border-top-right-radius: 10px;
+}
+
+.cell:nth-child(7) {
+    border-bottom-left-radius: 10px;
+}
+
+.cell:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3) {
+    border-top: none;
+}
+
+.cell:nth-child(3n + 1) {
+    border-left: none;
+}
+
+.cell:nth-child(3n + 3) {
+    border-right: none;
+}
+
+.cell:last-child,
+.cell:nth-child(8),
+.cell:nth-child(7) {
+    border-bottom: none;
+}
+
+.cell.x::before,
+.cell.x::after,
+.board.x .cell:not(.x):not(.circle):hover::before,
+.board.x .cell:not(.x):not(.circle):hover::after {
+    content: '';
+    position: absolute;
+    width: calc(var(--mark-size) * .15);
+    height: var(--mark-size);
+    background-color: #6f33e7;
+}
+
+.board.x .cell:not(.x):not(.circle):hover::before,
+.board.x .cell:not(.x):not(.circle):hover::after {
+    background-color: #494054;
+}
+
+.cell.x::before,
+.board.x .cell:not(.x):not(.circle):hover::before {
+    transform: rotate(45deg);
+    border-radius: 10px;
+}
+
+.cell.x::after,
+.board.x .cell:not(.x):not(.circle):hover::after {
+    transform: rotate(-45deg);
+    border-radius: 10px;
+}
+
+.cell.circle::before,
+.cell.circle::after,
+.board.circle .cell:not(.x):not(.circle):hover::before,
+.board.circle .cell:not(.x):not(.circle):hover::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+.cell.circle::before,
+.board.circle .cell:not(.x):not(.circle):hover::before {
+    width: var(--mark-size);
+    height: var(--mark-size);
+    background-color: transparent;
+    border: 18px solid;
+    border-color: #a9352b;
+}
+
+.board.circle .cell:not(.x):not(.circle):hover::before,
+.board.circle .cell:not(.x):not(.circle):hover::after {
+    border-color: #6b4340;
+}
+
+.active-score {
+    width: 700px;
+    height: 100px;
+    font-size: 25px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+
+}
+
+.active-score > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.score {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.owner {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+
+    width: 100%;
+    color: white;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(50 50 50);
+}
+::-webkit-scrollbar-thumb {
+    background:rgb(100 100 100);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(80 80 80);
+}

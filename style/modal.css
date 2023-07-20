@@ -1,0 +1,73 @@
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+
+    background-color: rgba(0,0,0,.6);
+    opacity: 1;
+
+    justify-content: center;
+}
+
+.contents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+}
+
+.modal-wrapper {
+    width: 600px;
+    height: 600px;
+    background-color: rgba(25,25,25,.8);
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.reset-btn,.okay-btn {
+    margin-right: 10px;
+    background-color: white;
+    padding: 18px 55px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    border: none;
+    transition: background-color .5s;
+}
+
+.reset-btn:hover,
+.okay-btn:hover {
+    background-color: black;
+    color: white;
+}
+
+
+.winning-message {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.scores {
+    font-size: 25px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
